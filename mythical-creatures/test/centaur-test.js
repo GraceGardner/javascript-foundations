@@ -62,6 +62,7 @@ describe('Centaur', function() {
     centaur.shootBow()
     centaur.run()
     centaur.shootBow()
+    console.log(centaur.count)
 
     assert.equal(centaur.cranky, true)
   });
