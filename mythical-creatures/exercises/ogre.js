@@ -14,14 +14,19 @@ class Ogre {
 
     encounter(human) {
       human.encounterCounter ++;
-
+      if (human.encounterCounter % 3 == 0){
+        this.swings ++;
+      } if (this.swings == 2) {
+        human.knockedOut = true;
+      }
     }
 
     swingAt(human) {
-        this.swings ++;
-        // if (this.swings == 2) {
-        //   human.knockedOut = true;
-        // }
+      this.swings++
+    }
+
+    apologize(human) {
+      human.knockedOut = false;
     }
 }
 
